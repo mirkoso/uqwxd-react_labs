@@ -1,0 +1,38 @@
+{
+  "$id": "/capability-resource-api/schemas",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Messages Schema",
+  "description": "The Schema provides a definition of messages required by ICapabilityResourceAPI and allows to verify them.",
+  "$defs": {
+    "capability-template": {
+      "$id": "capability-template",
+      "type": "object",
+      "properties": {
+        "version": {
+          "description": "Capability Template Version",
+          "type": "string",
+          "pattern": "[0-9]*.[0-9]*.[0-9]"
+        },
+        "name": {
+          "type": "string"
+        },
+        "info": {
+          "type": "string"
+        },
+        "metadata-type": {
+          "type": "string",
+          "format": "uri"
+        },
+        "metadata": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string"
+        },
+        "resource-provider-endpoint": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
